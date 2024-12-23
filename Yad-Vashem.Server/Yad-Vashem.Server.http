@@ -1,0 +1,6 @@
+@Yad_Vashem.Server_HostAddress = http://localhost:5241
+
+GET {{Yad_Vashem.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
