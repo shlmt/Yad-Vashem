@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { TimeSlot } from './models/timeSlot.interface';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,25 +6,20 @@ import { TimeSlot } from './models/timeSlot.interface';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  public timeSlots: TimeSlot[] = [];
+export class AppComponent {
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.getTimeSlots();
-  }
+  // getTimeSlots() {
+  //   this.http.get<TimeSlot[]>('/api/timeSlot').subscribe(
+  //     (result) => {
+  //       this.timeSlots = result;
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //     }
+  //   );
+  // }
 
-  getTimeSlots() {
-    this.http.get<TimeSlot[]>('/api/timeSlot').subscribe(
-      (result) => {
-        this.timeSlots = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  title = 'yad-vashem.client';
+  title = 'yad-vashem.client'
 }

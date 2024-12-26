@@ -1,0 +1,33 @@
+<div class="timescreen">
+    <div class="header">
+        <div class="langs">
+            <span>english</span> | <span>עברית</span>
+        </div>
+        <div class="logo"><img src="favicon.ico"/></div>
+        <div class="icons"> 
+            <span>home</span> | <span>help</span>
+        </div>
+    </div>
+    <div class="title">
+        <h1>wellcome</h1>
+        <h2>its free</h2>
+        <p>choose when...</p>
+    </div>
+    <div class="input">
+        <div>num of guests</div>
+        <div class="btns">
+            <button (click)="dec()">-</button>
+            <div class="num">{{num}}</div>
+            <button (click)="inc()">+</button>
+        </div>
+    </div>
+    <div class="time-slots">
+        @for (timeSlot of timeSlots; track $index) {
+            <app-time-slot [timeSlot]="timeSlot" [num]="num"></app-time-slot>
+        }
+    </div>
+    <div class="navigation">
+        <button>prev</button>
+        <button>next</button>
+    </div>
+</div>

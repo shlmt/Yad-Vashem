@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TimesScreenComponent } from './components/times-screen/times-screen.component';
+import { TimeSlotComponent } from './components/time-slot/time-slot.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimesScreenComponent,
+    TimeSlotComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

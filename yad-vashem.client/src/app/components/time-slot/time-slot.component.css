@@ -1,0 +1,29 @@
+.time-slot{
+  background-color: white;
+  color: blue;
+  border: 1px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 75px;
+  height: 45px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.826);
+    border: 1px solid black;
+  }
+}
+
+.disable{
+  cursor: no-drop;
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.65);
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.65);
+    /* border: 1px solid black; */
+  }
+
+}
