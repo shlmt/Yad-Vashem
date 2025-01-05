@@ -10,16 +10,5 @@ export class AppComponent {
 
   constructor() {}
 
-  // getTimeSlots() {
-  //   this.http.get<TimeSlot[]>('/api/timeSlot').subscribe(
-  //     (result) => {
-  //       this.timeSlots = result;
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //     }
-  //   );
-  // }
-
   title = 'yad-vashem.client'
 }
