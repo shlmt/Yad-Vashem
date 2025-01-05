@@ -10,7 +10,7 @@
     </div>
     <div class="title">
         <h1>wellcome</h1>
-        <h2>its free</h2>
+        <h3>left {{numOfCards}} cards</h3>
         <p>choose when...</p>
     </div>
     <div class="input">
@@ -21,9 +21,16 @@
             <button (click)="inc()">+</button>
         </div>
     </div>
+    <div class="when">
+        <button (click)="chooseTime('morning')" [ngClass]="{'chosen': timeSlice === 'morning'}">morning</button>
+        <button (click)="chooseTime('noon')" [ngClass]="{'chosen': timeSlice === 'noon'}">noon</button>
+        <button (click)="chooseTime('afternoon')" [ngClass]="{'chosen': timeSlice === 'afternoon'}">afternoon</button>
+    </div>
     <div class="time-slots">
         @for (timeSlot of timeSlots; track $index) {
-            <app-time-slot [timeSlot]="timeSlot" [num]="num"></app-time-slot>
+            @if(convertToMinutes(timeSlot.startTime) >= startTime && convertToMinutes(timeSlot.startTime) <= endTime){
+                <app-time-slot [timeSlot]="timeSlot" [num]="num"></app-time-slot>
+            }
         }
     </div>
     <div class="navigation">

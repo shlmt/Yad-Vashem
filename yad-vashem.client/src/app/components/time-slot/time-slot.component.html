@@ -1,6 +1,6 @@
 @if(timeSlot){
 <div class="time-slot" [ngClass]="timeSlot.isClosed || timeSlot.availablePlaces == 0 || timeSlot.availablePlaces<num ? 'disable' : ''">
-    <div class="hour">8:00</div>
+    <div class="hour">{{timeSlot.startTime}}</div>
     @if(timeSlot.isClosed){<div class="close">closed</div>}
     @else if(timeSlot.availablePlaces == 0 || timeSlot.availablePlaces<num){<div class="finish">finish</div>}
     @else {<div class="num">{{timeSlot.availablePlaces}}</div>}

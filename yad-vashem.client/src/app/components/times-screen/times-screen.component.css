@@ -30,7 +30,7 @@
     h1{
       margin-bottom: 0;
     }
-    h2{
+    h3{
       margin: 5px;
     }
     p{
@@ -52,6 +52,18 @@
         cursor: pointer;
       }
     }
+  }
+
+  .when{   
+    margin-top: 25px; 
+    button{
+      height: 30px;
+      margin: 2px;
+    }
+      .chosen{
+        font-weight: bold;
+        background-color: #aeaed3;
+      }
   }
 
   .time-slots{
